@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>测试TP5</title>
+	<link rel="stylesheet" type="text/css" href="file/base.css">
+	<link rel="stylesheet" type="text/css" href="file/style.css">
+	<script type="text/javascript" src="file/jquery.min.js"></script>
+</head>
+<body>
+<nav>
+	<div class="nav">
+		<img src="file/logo.png" alt="图片走丢了">
+		<div class="login-warp">
+			<div class="login-type">
+				<a href="http://www.ceshi.com/index/index/index/logcookie/1">退出</a><a>个人中心</a><a>张三</a>
+			</div>
+		</div>
+	</div>
+</nav>
+<header>
+	<div class="header">
+		<ul class="clear">
+			<li><a href="index.html" attrid="1">超出</a></li>
+			<li class="active"><a href="" attrid="2">未超出</a></li>
+		</ul>
+	</div>
+</header>
+
+<main>
+    <h1>55</h1>
+    <h1>55</h1>
+    <h1>55</h1>
+    <h1>55</h1>
+    <h1>55</h1>
+    <h1>55</h1>
+</main>
+
+<footer>
+    <div class="footer">
+        <ul class="clear">
+            <li><a href="http://www.ceshi.com/index/index/public1/fid/1">项目背景</a></li>
+            <li><a href="http://www.ceshi.com/index/index/public1/fid/2">项目架构</a></li>
+        </ul>
+    </div>
+</footer>
+<script>
+    var ch=window.innerHeight;
+    var jh=$("nav").height()+$("header").height()+$("footer").height();
+    var yh=$("main").height();
+    if((jh+yh)>ch){
+        $("footer").css("position","static");
+    }
+    window.onresize = function(){
+        var ch=window.innerHeight;
+        var jh=$("nav").height()+$("header").height()+$("footer").height();
+        $("main").css("min-height",(ch-jh)+"px");
+    }
+</script>
+</body>
+</html>
